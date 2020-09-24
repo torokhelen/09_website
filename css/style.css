@@ -43,6 +43,16 @@ nav {
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 
+.chef,
+.hairstylist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hero {
   overflow: hidden; /* az animacio miatt */
   height: 500px;
@@ -55,6 +65,10 @@ nav {
   height: 500px;
   transition: transform 0.3s ease-out;
   cursor: pointer;
+}
+
+.hero a {
+  display: flex;
 }
 
 .model-right {
@@ -235,4 +249,43 @@ nav {
     padding: 30px;
     text-align: center;
   }
+}
+
+.nav-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 1; /* it comes to the top  --> it is needed because of the image in the center*/
+  color: black;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.contact {
+  grid-column: 2/3;
+}
+
+.nav-open h3 {
+  font-size: 2rem;
+  bottom: 3rem;
+}
+
+.social p {
+  font-size: 0.8rem;
+}
+
+.social-links img {
+  padding: 0rem 0.8rem;
+}
+
+.logo,
+.menu {
+  z-index: 2;
 }
